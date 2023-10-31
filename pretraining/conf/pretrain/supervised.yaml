@@ -1,0 +1,6 @@
+context_length: 480
+lr: 1e-3
+lr_warmup: 10000
+beta1: 0.9
+beta2: 0.98
+weight_decay: 1e-1

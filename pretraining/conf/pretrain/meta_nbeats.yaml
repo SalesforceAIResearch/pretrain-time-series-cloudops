@@ -1,0 +1,4 @@
+loss: smape
+context_len_mult: 11
+lr: 1e-3
+weight_decay: 0

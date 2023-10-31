@@ -1,0 +1,7 @@
+d_model: 512
+nhead: 8
+num_encoder_layers: 9
+num_decoder_layers: 9
+dim_feedforward: 2048
+activation: "gelu"
+dropout: 0.1

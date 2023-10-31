@@ -1,0 +1,23 @@
+defaults:
+  - _self_
+  - backbone: encoder_decoder
+  - size: base
+  - pretrain: supervised
+seed: 42
+data:
+  dataset_name: azure_vm_traces_2017
+  batch_size: 128
+  num_batches_per_epoch: 100
+  num_workers: 12
+  pretrain: True
+trainer:
+  max_epochs: 1000
+  accelerator: gpu
+  devices: auto
+  strategy: auto
+  precision: 32
+  gradient_clip_val: 10.0
+  accumulate_grad_batches: 1
+tf32: True
+output_head: student_t
+pretrained_ckpt: null

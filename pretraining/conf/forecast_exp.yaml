@@ -1,0 +1,25 @@
+defaults:
+  - _self_
+  - backbone: encoder_decoder
+  - forecast: zeroshot
+  - size: base
+data:
+  dataset_name: azure_vm_traces_2017
+  batch_size: 128
+  sampling_batch_size: 32
+  num_batches_per_epoch: 100
+  num_workers: 12
+trainer:
+  max_epochs: 100
+  accelerator: gpu
+  devices: auto
+  strategy: auto
+  precision: 32
+  gradient_clip_val: 10.0
+  accumulate_grad_batches: 1
+tf32: True
+test: False
+seed: 42
+pretrained_ckpt: null
+output_head: student_t
+ckpt_epoch: null
